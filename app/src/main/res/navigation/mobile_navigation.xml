@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.eit.brnnda.fragments.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_home" >
+        <action
+
+            android:id="@+id/action_nav_home_to_productFragment"
+            app:destination="@id/productFragment" />
+
+        <action
+
+            android:id="@+id/action_nav_home_to_catFragment"
+            app:destination="@id/catFragment" />
+        <action
+
+            android:id="@+id/action_nav_home_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_catWiseProductFragment"
+            app:destination="@id/catWiseProductFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="com.eit.brnnda.fragments.ProductFragment"
+        android:label=""
+        tools:layout="@layout/fragment_product" />
+
+
+    <fragment
+        android:id="@+id/bottom_wish"
+        android:name="com.eit.brnnda.fragments.WishListFragment"
+        android:label="@string/bottom_wish_list"
+        tools:layout="@layout/fragment_wish_list" >
+        <action
+            android:id="@+id/action_bottom_wish_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom_cart"
+        android:name="com.eit.brnnda.fragments.CartFragment"
+        android:label="@string/bottom_cart"
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_bottom_cart_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bottom_account"
+        android:name="com.eit.brnnda.fragments.AccountSection.UserAccountFragment"
+        android:label="@string/bottom_account"
+        tools:layout="@layout/fragment_user_account" >
+        <action
+            android:id="@+id/action_bottom_account_to_orderHistoryFragment"
+            app:destination="@id/orderHistoryFragment" />
+        <action
+            android:id="@+id/action_bottom_account_to_priveyPolecyFragment"
+            app:destination="@id/priveyPolecyFragment" />
+        <action
+            android:id="@+id/action_bottom_account_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/action_bottom_account_to_turmsNConditonFragment"
+            app:destination="@id/turmsNConditonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/catFragment"
+        android:name="com.eit.brnnda.fragments.Category.CatFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_cat" >
+        <action
+            android:id="@+id/action_catFragment_to_catWiseProductFragment"
+            app:destination="@id/catWiseProductFragment" />
+        <action
+            android:id="@+id/action_catFragment_to_subCatWiseProductFragment"
+            app:destination="@id/subCatWiseProductFragment" />
+        <action
+            android:id="@+id/action_catFragment_to_childCatWiseProductFragment"
+            app:destination="@id/childCatWiseProductFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderTrackFragment"
+        android:name="com.eit.brnnda.fragments.AccountSection.OrderTrackFragment"
+        android:label="Order Tracking"
+        tools:layout="@layout/fragment_order_track" />
+    <fragment
+        android:id="@+id/orderDetailsFragment"
+        android:name="com.eit.brnnda.fragments.OrderDetailsFragment"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
+    <fragment
+        android:id="@+id/orderHistoryFragment"
+        android:name="com.eit.brnnda.fragments.AccountSection.OrderHistoryFragment"
+        android:label="My orders"
+        tools:layout="@layout/fragment_order_history" >
+        <action
+            android:id="@+id/action_orderHistoryFragment_to_orderTrackFragment"
+            app:destination="@id/orderTrackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.eit.brnnda.fragments.SearchFragment"
+        android:label="Find the product"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCouonFragment"
+        android:name="com.eit.brnnda.fragments.AddCouonFragment"
+        android:label="Find best coupon"
+        tools:layout="@layout/fragment_add_couon" >
+        <action
+            android:id="@+id/action_addCouonFragment_to_checkOutFragment"
+            app:destination="@id/checkOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkOutFragment"
+        android:name="com.eit.brnnda.fragments.CheckOutFragment"
+        android:label="Check out"
+        tools:layout="@layout/fragment_check_out" >
+        <action
+            android:id="@+id/action_checkOutFragment_to_addCouonFragment"
+            app:destination="@id/addCouonFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/catWiseProductFragment"
+        android:name="com.eit.brnnda.fragments.Category.CatWiseProductFragment"
+        android:label="Category wise"
+        tools:layout="@layout/fragment_cat_wise_product" >
+        <action
+            android:id="@+id/action_catWiseProductFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/childCatWiseProductFragment"
+        android:name="com.eit.brnnda.fragments.Category.ChildCatWiseProductFragment"
+        android:label="fragment_child_cat_wise_product"
+        tools:layout="@layout/fragment_child_cat_wise_product" >
+        <action
+            android:id="@+id/action_childCatWiseProductFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subCatWiseProductFragment"
+        android:name="com.eit.brnnda.fragments.Category.SubCatWiseProductFragment"
+        android:label="fragment_sub_cat_wise_product"
+        tools:layout="@layout/fragment_sub_cat_wise_product" >
+        <action
+            android:id="@+id/action_subCatWiseProductFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.eit.brnnda.fragments.AccountSection.UpdateProfileFragment"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_update_profile" />
+    <fragment
+        android:id="@+id/priveyPolecyFragment"
+        android:name="com.eit.brnnda.fragments.AccountSection.PriveyPolecyFragment"
+        android:label="fragment_privey_polecy"
+        tools:layout="@layout/fragment_privey_polecy" />
+    <fragment
+        android:id="@+id/turmsNConditonFragment"
+        android:name="com.eit.brnnda.fragments.AccountSection.TurmsNConditonFragment"
+        android:label="fragment_turms_n_conditon"
+        tools:layout="@layout/fragment_turms_n_conditon" />
+
+</navigation>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Please Select another address"
+        android:textSize="18sp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="50dp"
+        android:background="@color/dots_color">
+
+
+    </LinearLayout>
+
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:borderColor="@color/dots_color"
+        app:borderWidth="1dp"
+        app:cornerRadius="8dp">
+
+        <EditText
+            android:id="@+id/etBottomSheet_NameId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="text" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:borderColor="@color/dots_color"
+        app:borderWidth="1dp"
+        app:cornerRadius="8dp">
+
+        <EditText
+            android:id="@+id/etBottomSheet_PhoneId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone no"
+            android:inputType="phone" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:layout_marginEnd="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/dots_color"
+            app:borderWidth="1dp"
+            app:cornerRadius="8dp">
+
+            <EditText
+                android:id="@+id/etBottomSheet_CityId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="City"
+                android:inputType="text" />
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+
+        <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp"
+            android:layout_height="wrap_content"
+            app:borderColor="@color/dots_color"
+            app:borderWidth="1dp"
+            app:cornerRadius="8dp">
+
+            <EditText
+                android:id="@+id/etBottomSheet_ZipId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Zip"
+                android:maxLength="4"
+                android:inputType="phone" />
+
+        </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+    </LinearLayout>
+
+
+
+    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:borderColor="@color/dots_color"
+        app:borderWidth="1dp"
+        app:cornerRadius="8dp">
+
+        <EditText
+            android:id="@+id/etBottomSheet_AddressId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Address"
+            android:inputType="text" />
+
+    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+    <Button
+        android:id="@+id/bottomSheet_ButtonSubmitId"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/bg_button_red"
+        android:text="Submit"
+        android:textAllCaps="false">
+
+    </Button>
+
+</LinearLayout>

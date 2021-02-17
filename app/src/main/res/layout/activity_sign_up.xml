@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myViewModel"
+            type="com.eit.brnnda.view_model.MyViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Activity.SignUpActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.coordinatorlayout.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:orientation="vertical"
+                    tools:context=".view.MainActivity">
+
+
+                    <ImageView
+                        android:id="@+id/imageViewMainId"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shopping">
+
+                    </ImageView>
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageViewUserImageId"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@mipmap/brnnda"
+                        app:civ_border_color="@color/red"
+                        app:civ_border_width="2dp"
+                        app:civ_shadow="true"
+                        app:civ_shadow_color="@color/red"
+                        app:civ_shadow_radius="1dp"
+                        app:layout_anchor="@id/imageViewMainId"
+                        app:layout_anchorGravity="center|bottom">
+
+                    </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+                </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="30dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="30dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Sing up"
+                                android:textSize="20sp"
+                                android:textStyle="normal">
+
+                            </TextView>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="vertical">
+
+
+                                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:borderColor="@color/red"
+                                    app:borderWidth="1dp"
+                                    app:cornerRadius="8dp">
+
+                                    <EditText
+                                        android:id="@+id/etFullNameId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/hint_full_name"
+                                        android:inputType="text" />
+
+                                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:borderColor="@color/red"
+                                    app:borderWidth="1dp"
+                                    app:cornerRadius="8dp">
+
+                                    <EditText
+                                        android:id="@+id/etEmailId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/hint_email"
+                                        android:inputType="textEmailAddress" />
+
+                                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:borderColor="@color/red"
+                                    app:borderWidth="1dp"
+                                    app:cornerRadius="8dp">
+
+                                    <EditText
+                                        android:id="@+id/etPhoneId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="phone"
+                                        android:inputType="phone" />
+
+                                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:borderColor="@color/red"
+                                    app:borderWidth="1dp"
+                                    app:cornerRadius="8dp">
+
+                                    <EditText
+                                        android:id="@+id/etAddressId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="Address"
+                                        android:inputType="text"
+                                        android:singleLine="false" />
+
+                                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    app:borderColor="@color/red"
+                                    app:borderWidth="1dp"
+                                    app:cornerRadius="8dp">
+
+                                    <EditText
+                                        android:id="@+id/editTextPasswordId"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:hint="@string/hint_password"
+                                        android:inputType="textPassword" />
+
+                                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                            </LinearLayout>
+
+
+                            <RelativeLayout
+                                android:layout_marginStart="100dp"
+                                android:layout_marginEnd="100dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="40dp">
+
+                                <Button
+                                    android:id="@+id/signUpViewButtonId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/bg_button_red"
+                                    android:text="Sign up"
+                                    android:textColor="@color/white"
+                                    android:visibility="visible">
+
+                                </Button>
+
+                                <ProgressBar
+                                    android:id="@+id/progressbar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:visibility="gone" />
+
+
+                            </RelativeLayout>
+
+
+                            <TextView
+                                android:id="@+id/tv_already_registered"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="40dp"
+                                android:gravity="center"
+                                android:text="already registered"
+                                android:textSize="15sp"
+                                android:textStyle="normal">
+
+                            </TextView>
+
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+</layout>
+

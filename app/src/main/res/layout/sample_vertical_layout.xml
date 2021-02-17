@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_control"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:focusable="false">
+
+            <RelativeLayout
+                android:id="@+id/rlImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivProductImageId"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    tools:src="@drawable/watch" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvSaleLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_standard"
+                android:layout_marginTop="@dimen/spacing_standard"
+                android:background="@drawable/bg_ractangal"
+                android:backgroundTint="@color/red"
+                android:paddingStart="@dimen/spacing_standard"
+                android:paddingEnd="@dimen/spacing_standard"
+                android:text="Sale"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_micro"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tvProductWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlImage"
+                android:layout_marginStart="@dimen/spacing_standard"
+                android:layout_marginTop="@dimen/spacing_control"
+                android:layout_marginEnd="@dimen/spacing_standard"
+                android:singleLine="true"
+                android:textSize="@dimen/font_size_micro" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProductWeight"
+                android:layout_marginStart="@dimen/spacing_standard"
+                android:layout_marginEnd="@dimen/spacing_standard"
+                android:maxLines="2"
+                android:textColor="@color/textColorPrimary"
+                android:textSize="@dimen/font_size_small"
+                tools:text="Lemon" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvProductName"
+                android:layout_margin="@dimen/spacing_standard">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/spacing_control"
+                    android:layout_toStartOf="@id/tvAdd">
+
+                    <TextView
+                        android:id="@+id/tvOriginalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_control_half"
+                        android:layout_marginBottom="1dp"
+                        android:gravity="bottom"
+                        android:singleLine="true"
+                        android:textColor="@color/textColorSecondary"
+                        android:textSize="@dimen/font_size_micro"
+                        android:visibility="visible"
+                        tools:text="1000" />
+
+                    <TextView
+                        android:id="@+id/tvDiscountPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvOriginalPrice"
+                        android:singleLine="true"
+                        android:textSize="@dimen/font_size_small"
+                        tools:text="1000" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center_horizontal|center"
+                    android:padding="@dimen/spacing_xmedium"
+                    android:text="Add"
+                    android:textColor="@color/purple_200"
+                    android:textSize="@dimen/font_size_small"
+                    app:cornerRadius="@dimen/spacing_control" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</layout>

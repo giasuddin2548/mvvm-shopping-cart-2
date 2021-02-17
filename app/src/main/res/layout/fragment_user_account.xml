@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="myViewModel"
+            type="com.eit.brnnda.view_model.MyViewModel" />
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".fragments.AccountSection.UserAccountFragment">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/viewId"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="@drawable/bg_curve_bottom_red">
+
+                </View>
+
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/imageViewUserImageId"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_menu_gallery"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_color="@color/white"
+                    app:civ_shadow_radius="1dp"
+                    app:layout_anchor="@id/viewId"
+                    app:layout_anchorGravity="center">
+
+                </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bodyId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_ractangal_confirm_fail"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+
+                                android:id="@+id/imageViewUpdateId"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_margin="5dp"
+                                android:visibility="gone">
+
+                            </ImageView>
+
+                            <TextView
+                                android:id="@+id/tVUserName_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@+id/imageViewUpdateId"
+                                android:gravity="center"
+                                android:text="Gias uddin Samir"
+                                android:textSize="20sp"
+                                android:textStyle="bold">
+
+                            </TextView>
+
+
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tVUserShowBalance_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:text="৳ 12540"
+                            android:textAllCaps="true"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/dots_color">
+
+                        </LinearLayout>
+
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_baseline_person_outline_24">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:layout_toStartOf="@+id/imageView11"
+                                android:id="@+id/tVEditProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/imageView1"
+                                android:gravity="center"
+                                android:text="@string/lbl_edit_profile"
+                                android:textAlignment="textStart"
+                                android:textSize="15sp"
+                                tools:ignore="RtlCompat">
+
+                            </TextView>
+
+
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/imageView11"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_baseline_arrow_forward_24">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/dots_color">
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/imageViewEmailId"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/shopping_cart_black">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:layout_toStartOf="@+id/imageViewMyOrder"
+                                android:id="@+id/tVMyOrder_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/imageViewEmailId"
+                                android:gravity="center"
+                                android:text="My orders"
+                                android:textAlignment="textStart"
+                                android:textSize="15sp"
+                                tools:ignore="RtlCompat">
+
+                            </TextView>
+
+
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/imageViewMyOrder"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_baseline_arrow_forward_24">
+
+                            </ImageView>
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/dots_color">
+
+                        </LinearLayout>
+
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/imageViewPhoneId"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_rateus">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:id="@+id/tVRateUs_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:text="Rate us"
+                                android:layout_toStartOf="@+id/imageViewMyOrdfsder"
+                                android:layout_margin="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/imageViewPhoneId"
+                                android:gravity="center"
+                                android:textAlignment="textStart"
+                                android:textSize="15sp"
+                                tools:ignore="RtlCompat">
+
+                            </TextView>
+
+
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/imageViewMyOrdfsder"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_baseline_arrow_forward_24">
+
+                            </ImageView>
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/dots_color">
+
+                        </LinearLayout>
+
+
+
+                        <RelativeLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+
+                            <ImageView
+                                android:id="@+id/imageViewdfasdfPhoneId"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_rateus">
+
+                            </ImageView>
+
+
+                            <TextView
+                                android:id="@+id/tVInvite_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:text="Invite your friend"
+                                android:layout_toStartOf="@+id/imageViewMyOrdfsdfdser"
+                                android:layout_margin="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_toEndOf="@+id/imageViewdfasdfPhoneId"
+                                android:gravity="center"
+                                android:textAlignment="textStart"
+                                android:textSize="15sp"
+                                tools:ignore="RtlCompat">
+
+                            </TextView>
+
+
+
+                            <ImageView
+                                android:layout_marginEnd="5dp"
+                                android:layout_alignParentEnd="true"
+                                android:id="@+id/imageViewMyOrdfsdfdser"
+                                android:layout_width="20dp"
+                                android:layout_height="30dp"
+                                android:layout_margin="5dp"
+                                android:src="@drawable/ic_baseline_arrow_forward_24">
+
+                            </ImageView>
+
+
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:background="@color/dots_color">
+
+                        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+                        <RelativeLayout
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:orientation="horizontal">
+
+
+                            <Button
+                                android:id="@+id/imageViewLogOutId"
+                                android:textAllCaps="false"
+                                android:text="Logout"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/bg_button_red"
+                                android:layout_width="100dp"
+                                android:layout_height="40dp">
+
+                            </Button>
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <ProgressBar
+            android:id="@+id/progressBarDetailsId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+</layout>
+

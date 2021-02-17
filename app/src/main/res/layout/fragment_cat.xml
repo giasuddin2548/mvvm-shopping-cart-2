@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="myViewModel"
+            type="com.eit.brnnda.view_model.MyViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorScreenBackground"
+        tools:context=".fragments.Category.CatFragment">
+
+
+
+        <RelativeLayout
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@id/parentLayoutId"
+            android:orientation="vertical"
+            android:id="@+id/subLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/bg_curve_bottom"
+                android:gravity="center"
+                android:text="Sub Category"
+                android:id="@+id/tvSubheader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/tvSubheader"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/recyclerViewSubCatId"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tvNoSubCat"
+                android:textColor="@color/red"
+                android:text="No sub Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true">
+
+            </TextView>
+
+            <ProgressBar
+                android:id="@+id/progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginStart="3dp"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical"
+            android:id="@+id/parentLayoutId"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:background="@drawable/bg_curve_bottom"
+                android:gravity="center"
+                android:text="Category"
+                android:id="@+id/tvCatheader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/tvCatheader"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/reyclerViewCatId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+
+
+
+
+
+        <RelativeLayout
+            android:layout_below="@+id/subLayout"
+            android:layout_marginEnd="3dp"
+            android:layout_toStartOf="@id/parentLayoutId"
+            android:orientation="vertical"
+            android:id="@+id/childLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:background="@drawable/bg_curve_bottom"
+                android:gravity="center"
+                android:text="Child Category"
+                android:id="@+id/tvChildeader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/tvChildeader"
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/recyclerViewChildCatId"
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tvNoChildCat"
+                android:textColor="@color/red"
+                android:text="No child Category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true">
+
+            </TextView>
+
+            <ProgressBar
+                android:id="@+id/progressbarChild"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:layout_centerHorizontal="true"
+                android:visibility="invisible" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+    </RelativeLayout>
+
+</layout>

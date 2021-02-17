@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemclick"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp">
+
+        <LinearLayout
+            android:background="@drawable/bg_square_dotted"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:id="@+id/tvAmountOrPercentId"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/lbl_10"
+                android:textSize="100sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvCouponTypeId"
+                android:gravity="bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="৳"
+                android:textSize="60sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <TextView
+                android:textColor="@color/background_grey"
+                android:gravity="top"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Any \n product"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+        <variable
+            name="myViewModel"
+            type="com.eit.brnnda.view_model.MyViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        tools:context=".fragments.AccountSection.UpdateProfileFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nsvCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:overScrollMode="never">
+
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/imageViewUserImageId"
+                            android:layout_width="match_parent"
+                            android:src="@mipmap/brnnda"
+                            android:layout_height="match_parent"
+                            app:civ_border_color="@color/black"
+                            app:civ_border_width="2dp"
+                            app:civ_shadow="true"
+                            app:civ_shadow_color="@color/black"
+                            app:civ_shadow_radius="1dp"
+                            app:layout_anchorGravity="center">
+
+                        </com.mikhaellopez.circularimageview.CircularImageView>
+
+                        <ImageView
+                            android:id="@+id/imageViewAddImageId"
+                            android:background="@drawable/bg_circle_selected"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            android:src="@drawable/ic_baseline_add_white"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:borderColor="@color/dots_color"
+                    app:borderWidth="1dp"
+                    app:cornerRadius="8dp">
+
+                    <EditText
+                        android:id="@+id/etEditProfile_NameId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_full_name"
+                        android:inputType="text" />
+
+                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:borderColor="@color/dots_color"
+                    app:borderWidth="1dp"
+                    app:cornerRadius="8dp">
+
+                    <EditText
+                        android:id="@+id/etEditProfile_EmailId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_Email"
+                        android:inputType="textEmailAddress" />
+
+                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+
+                    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                        android:layout_marginEnd="5dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        app:borderColor="@color/dots_color"
+                        app:borderWidth="1dp"
+                        app:cornerRadius="8dp">
+
+                        <EditText
+                            android:id="@+id/etEditProfile_CityId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/hint_city"
+                            android:inputType="text" />
+
+                    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+
+                    <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="5dp"
+                        android:layout_height="wrap_content"
+                        app:borderColor="@color/dots_color"
+                        app:borderWidth="1dp"
+                        app:cornerRadius="8dp">
+
+                        <EditText
+                            android:id="@+id/etEditProfile_ZipId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Zip "
+                            android:maxLength="4"
+                            android:inputType="phone" />
+
+                    </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+
+                </LinearLayout>
+
+
+
+                <ss.anoop.awesometextinputlayout.AwesomeTextInputLayout
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:borderColor="@color/dots_color"
+                    app:borderWidth="1dp"
+                    app:cornerRadius="8dp">
+
+                    <EditText
+                        android:id="@+id/etEditProfile_AddressId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_address"
+                        android:inputType="text" />
+
+                </ss.anoop.awesometextinputlayout.AwesomeTextInputLayout>
+
+                <RelativeLayout
+                    android:layout_marginStart="100dp"
+                    android:layout_marginEnd="100dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="40dp">
+
+                    <Button
+                        android:textAllCaps="false"
+                        android:id="@+id/button_submit_activity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_button_red"
+                        android:text="Update"
+                        android:textColor="@color/white"
+                        android:visibility="visible">
+
+                    </Button>
+
+                    <ProgressBar
+                        android:id="@+id/progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+    </RelativeLayout>
+
+</layout>
+
+
+
+
+

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="myViewModel"
+            type="com.eit.brnnda.view_model.MyViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rlMain"
+        android:background="@color/colorScreenBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_above="@id/bottomId"
+            android:id="@+id/rvCart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/bottomId"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_top_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <TextView
+                android:id="@+id/tvTotalCartAmountghj"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:textColor="@color/purple_200"
+                android:text="Total"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </TextView>
+            <TextView
+                android:layout_toEndOf="@+id/tvTotalCartAmountghj"
+                android:id="@+id/tvTotalCartAmount"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:textColor="@color/purple_200"
+                android:text="$1250000"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </TextView>
+
+
+            <Button
+                android:id="@+id/tvPlaceOrderId"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_alignParentEnd="true"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button_red"
+                android:text="@string/lbl_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp">
+
+            </Button>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textviewItemFoundId"
+            android:layout_centerInParent="true"
+            android:text="No item found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+
+    </RelativeLayout>
+
+</layout>
+
+
+
+
+
+
+

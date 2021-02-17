@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.eit.brnnda">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="false"
+        android:icon="@mipmap/brnnda"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/brnnda"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Brnnda"
+        tools:targetApi="m">
+        <activity
+            android:name=".Activity.Dashboard"
+            android:label="@string/app_name" />
+
+        <activity android:name="com.eit.brnnda.Activity.ShoppingFaildActivity" />
+        <activity android:name="com.eit.brnnda.Activity.ShoppingSuccessActivity" />
+        <activity android:name="com.eit.brnnda.Activity.OTPActivity" />
+        <activity android:name="com.eit.brnnda.Activity.SignUpActivity" />
+        <activity android:name="com.eit.brnnda.Activity.LoginActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
